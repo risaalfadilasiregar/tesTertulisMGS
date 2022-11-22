@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <main>
+        <div class="login-page">
+            <div class="form">
+              
+              <h2>Login to your Account</h2>
+              
+              <form class="login-form">
+                <h5>Email Address</h5>
+                <input type="email" id="email" placeholder="example@gmail.com"/>
+                <h5>Password</h5>
+                <input type="password" id="password" onchange="cek_input()" placeholder="Password"/>
+                <button type="submit" onclick="validasi(form)">login</button> 
+              </form>
+            </div> 
+            
+          <div>
+            <p class="message">Do tou have an acoount? <a href="#">Register</a></p><br/>
+            
+          </div>
+
+        </div>
+
+        </main>
+    </body>
+    <script type="text/javascript">
+        function validasi(form) {
+            var email = document.getElementById("email").value;
+            var psw = document.getElementById("password").value;
+            if (email!="" && password !="") {
+                alert("Anda Berhasil Login");
+            }else{
+                alert('Kamu harus mengisi data dengan lengkap !');
+            }
+        }
+            function cek_input(){
+            var psw = document.getElementById("password").value;
+             if(psw.length<=8){ 
+            alert('Password kurang dari 8 karakter'); 
+            }
+    }
+
+    
+            
+        
+    </script>
+
+</html>
